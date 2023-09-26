@@ -12,7 +12,7 @@ import Rank from './components/Rank/Rank';
 import './App.css';
 
 const app = new Clarifai.App({
-  apiKey: '63e98ac2ac284c56bfeb3fd325807b8c'
+  apiKey: '18d772d83bae4ee58c9a4902be5e6d7a'
 });
 
 class App extends Component {
@@ -70,8 +70,9 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    app.models.predict('face-detection', this.state.input)
+    app.models.predict('face-finder', this.state.input)
       .then(response => {
+        console.log('hi', response)
         if (response) {
           fetch('http://localhost:3001/image', {
             method: 'put',
