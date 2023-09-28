@@ -70,7 +70,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    app.models.predict('face-finder', this.state.input)
+    app.models.predict('face-detection', this.state.input)
       .then(response => {
         console.log('hi', response)
         if (response) {
@@ -82,6 +82,7 @@ class App extends Component {
             })
           })
             .then(response => response.json())
+            console.log(response)
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count }))
             })
