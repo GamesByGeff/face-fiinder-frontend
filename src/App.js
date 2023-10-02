@@ -48,21 +48,18 @@ class App extends Component {
 
 
   calculateFaceLocation = (data) => {
-    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    const box = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
-    return {
-      leftCol: clarifaiFace.left_col * width,
-      topRow: clarifaiFace.top_row * height,
-      rightCol: width - (clarifaiFace.right_col * width),
-      bottomRow: height - (clarifaiFace.bottom_row * height)
+    const newBox = {
+      left: box.left_col * width,
+      top: box.top_row * height,
+      right: width - (box.right_col * width),
+      bottom: height - (box.bottom_row * height)
     }
-  }
-
-  displayFaceBox = (box) => {
-    this.setState({ box: box });
-  }
+    this.setState({box: newBox})
+  };
 
   onInputChange = (event) => {
     this.setState({ input: event.target.value });
@@ -82,15 +79,15 @@ class App extends Component {
             })
           })
             .then(response => response.json())
-            console.log(response)
+            .then(response => console.log(response.json()))
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count }))
             })
-
+            .catch(err => console.log('Error updating image:', err));
         }
-        this.displayFaceBox(this.calculateFaceLocation(response))
+        this.calculateFaceLocation(response);
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log('Face detection error:', err));
   }
 
   onRouteChange = (route) => {
