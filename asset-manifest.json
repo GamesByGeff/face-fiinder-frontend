@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/face-finder-frontend/static/css/main.47f59057.chunk.css",
+    "main.js": "/face-finder-frontend/static/js/main.d9737c10.chunk.js",
+    "main.js.map": "/face-finder-frontend/static/js/main.d9737c10.chunk.js.map",
+    "runtime-main.js": "/face-finder-frontend/static/js/runtime-main.45e43e50.js",
+    "runtime-main.js.map": "/face-finder-frontend/static/js/runtime-main.45e43e50.js.map",
+    "static/css/2.75261d94.chunk.css": "/face-finder-frontend/static/css/2.75261d94.chunk.css",
+    "static/js/2.d3cf3f3a.chunk.js": "/face-finder-frontend/static/js/2.d3cf3f3a.chunk.js",
+    "static/js/2.d3cf3f3a.chunk.js.map": "/face-finder-frontend/static/js/2.d3cf3f3a.chunk.js.map",
+    "index.html": "/face-finder-frontend/index.html",
+    "static/css/2.75261d94.chunk.css.map": "/face-finder-frontend/static/css/2.75261d94.chunk.css.map",
+    "static/css/main.47f59057.chunk.css.map": "/face-finder-frontend/static/css/main.47f59057.chunk.css.map",
+    "static/js/2.d3cf3f3a.chunk.js.LICENSE.txt": "/face-finder-frontend/static/js/2.d3cf3f3a.chunk.js.LICENSE.txt",
+    "static/media/GalaxyBrain.ffe605fe.jpg": "/face-finder-frontend/static/media/GalaxyBrain.ffe605fe.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45e43e50.js",
+    "static/css/2.75261d94.chunk.css",
+    "static/js/2.d3cf3f3a.chunk.js",
+    "static/css/main.47f59057.chunk.css",
+    "static/js/main.d9737c10.chunk.js"
+  ]
+}
